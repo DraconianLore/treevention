@@ -5,6 +5,7 @@ class SuburbsController < ApplicationController
         suburb = Suburb.find_by(name: params[:suburb]) 
 
         render :json => {
+            suburb: suburb.name,
             canopy: suburb.canopy
         }
     end
